@@ -16,19 +16,22 @@ require_once __DIR__. '/db/db.php';
   <title>MOVIE OOP </title>
 </head>
 <body>
-  <div class="container mt-5 d-flex flex-wrap ">
+  <h1 class="text-center">
+    Pete's Movie Night
+  </h1>
+  <div class="container-custom  d-flex flex-wrap mb-5  ">
 
     <?php foreach($movies as $movie): ?>
 
-      <div class="card mx-3 " style="width: 18rem;">
+      <div class="card mx-3 " style="width: 25rem;">
       <div class="img-container">
 
         <img class="card-img-top" src="<?php echo $movie->poster?->file_name?>" alt="<?php echo $movie->poster?->name?>">
       </div>
       <div class="card-body">
         <h5 class="card-title"><?php echo $movie->title ?></h5>
-        <p class="card-text"><?php echo $movie->description ?></p>
-        <p class="card-text">GENERI: <?php echo implode(', ', $movie->genres) ?></p>
+        <p class="card-text mb-5 description"><?php echo $movie->description ?></p>
+        <p class="card-text genres"><strong>GENERI:</strong> <?php echo implode(', ', $movie->genres) ?></p>
         
       </div>
       </div>

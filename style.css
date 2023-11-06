@@ -12,10 +12,37 @@ body{
   height: 100%;
 }
 
-.container{
+.container-custom{
   justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid rgba(211, 211, 211, 0.277);
+  padding-top: 52px;
+  background-color: rgba(11, 12, 12, 0.314);
+  border-radius: 20px;
 }
 
-.container .card {
+.container-custom .card {
   margin-bottom: 40px;
+  position: relative;
+}
+
+.card .genres{
+  position: absolute;
+  bottom: 5px;
+  margin-top: 20px;
+}
+.card .description{
+  font-size: 0.8rem;
+}
+
+h1{
+  font-style: italic;
+  font-size: 3.2rem;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  
+  color: antiquewhite;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+
 }
