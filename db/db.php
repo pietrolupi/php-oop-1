@@ -8,4 +8,4 @@ $movies = [
   new Movie('American Psycho', ' uuuuuuuuuuuuuu alkekekekekkekealalla',['thriller','comedy', 'horror'], new Media('img/American_Psycho.png', 'American Psycho')),
 
   new Movie('Drive', ' uuuuuuuuAAAAuuuuuu alkekekekekkekealalla',['thriller','comedy', 'horror'], new Media('img/drive.jfif', 'Drive')),
-]
+];

@@ -1,0 +1,21 @@
+body{
+  background-color: darkslategrey;
+}
+
+.img-container{
+  height: 400px;
+  border: 1px solid lightgray;
+}
+
+.img-container img{
+  object-fit: cover;
+  height: 100%;
+}
+
+.container{
+  justify-content: center;
+}
+
+.container .card {
+  margin-bottom: 40px;
+}
