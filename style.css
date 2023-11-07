@@ -9,7 +9,7 @@ body{
   object-fit: cover;
   height: 100%;
   object-position: top;
-}
+} 
 
 .container-custom{
   justify-content: center;
