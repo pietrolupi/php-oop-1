@@ -3,11 +3,12 @@ body{
 }
 
 .img-container{
-  height: 17rem;
+  
   
 }
 
 .img-container img{
+  width: 200px;
   object-fit: cover;
   height: 100%;
   object-position: top;
@@ -23,7 +24,8 @@ body{
   border-radius: 20px;
 }
 
-.container-custom .card {
+.container-custom .card-custom {
+  width: 600px;
   margin-bottom: 40px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.659);
@@ -33,12 +35,12 @@ body{
   border: 1px solid rgba(255, 255, 255, 0.374);
 }
 
-.card .genres{
+.card-custom .genres{
   position: absolute;
   bottom: 5px;
   margin-top: 20px;
 }
-.card .description{
+.card-custom .description{
   font-size: 0.8rem;
 }
 

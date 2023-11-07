@@ -31,7 +31,7 @@ die; */
 
     <?php foreach($productions as $production): ?>
 
-      <div class="card mx-3 " style="width: 20rem;">
+      <div class="card-custom mx-3 d-flex ">
       <div class="img-container">
 
         <img class="card-img-top" src="<?php echo $production->poster?->file_name ?? 'img/placeholder.jpg'?>" alt="<?php echo $production->poster?->name ?? $production->title?>">
