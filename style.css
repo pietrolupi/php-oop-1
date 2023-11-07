@@ -2,10 +2,7 @@ body{
   background-color: darkslategrey;
 }
 
-.img-container{
-  
-  
-}
+
 
 .img-container img{
   width: 200px;
@@ -19,13 +16,14 @@ body{
   width: 90%;
   margin: 0 auto;
   border: 2px solid rgba(211, 211, 211, 0.277);
-  padding-top: 52px;
+  padding-top: 102px;
   background-color: rgba(11, 12, 12, 0.314);
   border-radius: 20px;
+  position: relative;
 }
 
 .container-custom .card-custom {
-  width: 600px;
+  width: 650px;
   margin-bottom: 40px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.659);
@@ -33,12 +31,17 @@ body{
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.374);
+  
 }
 
-.card-custom .genres{
+.card-custom .datas{
   position: absolute;
   bottom: 5px;
   margin-top: 20px;
+}
+.datas p:first-child{
+  margin-bottom: 0px;
+  font-size: 0.8rem;
 }
 .card-custom .description{
   font-size: 0.8rem;
@@ -53,4 +56,28 @@ h1{
   color: antiquewhite;
   text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 
+}
+
+h4{
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: -13px;
+}
+
+.custom-form{
+  position: absolute;
+  top: 20px;
+}
+
+.custom-btn{
+  border-radius: 10px;
+  margin-left: 15px;
+  padding: 10px 20px;
+}
+
+.custom-select{
+  border-radius: 10px;
+  padding: 10px 20px;
+  height: 45.5px;
+  width: 180px;
 }

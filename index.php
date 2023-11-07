@@ -1,17 +1,19 @@
 <?php
 require_once __DIR__. '/Model/Production.php';
 require_once __DIR__. '/Model/TvSerie.php';
+require_once __DIR__. '/Model/Anime.php';
 require_once __DIR__. '/Model/Media.php';
 require_once __DIR__. '/Model/Movie.php';
 require_once __DIR__. '/db/db.php';
 
-/* $gameof = new TvSerie('got', 'blablabla', ['fantasy', 'drama'], new Media('img/American_Psycho.png', 'gameofthrones'), 1998, 2001, 49, 8);
+if(isset($_POST['category'])){
+  $switch = $_POST['category'];
+}else{
+  $switch = 'All';
+}
 
-$fightClub = new Movie('Fightclub', 'xdddddddddd', ['action', 'drama'], new Media('img/fightclub.webp', 'fightCLuuu'), 1998, 2.56 );
-var_dump($fightClub);
-var_dump($gameof);
 
-die; */
+
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +29,27 @@ die; */
   <h1 class="text-center">
     Pete's Movie Night
   </h1>
+
   <div class="container-custom  d-flex flex-wrap mb-5  ">
+  
+  <div class="custom-form">
+
+    <form class="d-flex align-items-center " method="post">
+  
+        <select class="form-select custom-select" aria-label="Default select example" name="category">
+          <option value="All">All</option>
+          <option value="Movie">Movie</option>
+          <option value="TvSerie">Tv-Series</option>
+          <option value="Anime">Anime</option>
+        </select>
+  
+        <button class="custom-btn" type="submit">ENTER</button>
+      </form>
+  </div>
 
     <?php foreach($productions as $production): ?>
 
+      <?php if(get_class($production) === $switch || $switch === 'All'):?>
       <div class="card-custom mx-3 d-flex ">
       <div class="img-container">
 
@@ -39,12 +58,16 @@ die; */
       <div class="card-body">
         <h4 class="card-title"><?php echo $production->title ?></h4>
         <p class="card-text mb-5 description"><?php echo $production->description ?></p>
-        <p> <?php echo $production->getTimeData() ?> </p>
-        <p class="card-text genres"><strong>GENERI:</strong> <?php echo implode(', ', $production->genres) ?></p>
+
+        <div class="datas">
+          <p> <?php echo $production->getTimeData() ?> </p>
+          <p class="card-text genres"><strong>GENRES:</strong> <?php echo implode(', ', $production->genres) ?></p>
+        </div>
         
       </div>
       </div>
 
+      <?php endif; ?>
     <?php endforeach; ?>
 
   </div>
