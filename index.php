@@ -5,13 +5,13 @@ require_once __DIR__. '/Model/Media.php';
 require_once __DIR__. '/Model/Movie.php';
 require_once __DIR__. '/db/db.php';
 
-$gameof = new TvSerie('got', 'blablabla', ['fantasy', 'drama'], new Media('img/American_Psycho.png', 'gameofthrones'), 1998, 2001, 49, 8);
+/* $gameof = new TvSerie('got', 'blablabla', ['fantasy', 'drama'], new Media('img/American_Psycho.png', 'gameofthrones'), 1998, 2001, 49, 8);
 
 $fightClub = new Movie('Fightclub', 'xdddddddddd', ['action', 'drama'], new Media('img/fightclub.webp', 'fightCLuuu'), 1998, 2.56 );
 var_dump($fightClub);
 var_dump($gameof);
 
-die;
+die; */
 ?>
 
 <!DOCTYPE html>
@@ -29,17 +29,18 @@ die;
   </h1>
   <div class="container-custom  d-flex flex-wrap mb-5  ">
 
-    <?php foreach($movies as $movie): ?>
+    <?php foreach($productions as $production): ?>
 
-      <div class="card mx-3 " style="width: 25rem;">
+      <div class="card mx-3 " style="width: 20rem;">
       <div class="img-container">
 
-        <img class="card-img-top" src="<?php echo $movie->poster?->file_name?>" alt="<?php echo $movie->poster?->name?>">
+        <img class="card-img-top" src="<?php echo $production->poster?->file_name ?? 'img/placeholder.jpg'?>" alt="<?php echo $production->poster?->name ?? $production->title?>">
       </div>
       <div class="card-body">
-        <h5 class="card-title"><?php echo $movie->title ?></h5>
-        <p class="card-text mb-5 description"><?php echo $movie->description ?></p>
-        <p class="card-text genres"><strong>GENERI:</strong> <?php echo implode(', ', $movie->genres) ?></p>
+        <h4 class="card-title"><?php echo $production->title ?></h4>
+        <p class="card-text mb-5 description"><?php echo $production->description ?></p>
+        <p> </p>
+        <p class="card-text genres"><strong>GENERI:</strong> <?php echo implode(', ', $production->genres) ?></p>
         
       </div>
       </div>

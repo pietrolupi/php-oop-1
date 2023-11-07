@@ -3,13 +3,14 @@ body{
 }
 
 .img-container{
-  height: 400px;
-  border: 1px solid lightgray;
+  height: 17rem;
+  
 }
 
 .img-container img{
   object-fit: cover;
   height: 100%;
+  object-position: top;
 }
 
 .container-custom{
@@ -25,6 +26,11 @@ body{
 .container-custom .card {
   margin-bottom: 40px;
   position: relative;
+  background-color: rgba(0, 0, 0, 0.659);
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.374);
 }
 
 .card .genres{
