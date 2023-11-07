@@ -15,4 +15,8 @@ class Movie extends Production {
 
   }
 
+  public function getTimeData(){
+    return "Released: $this->published_year, RT: $this->running_time m ";
+  }
+
 }

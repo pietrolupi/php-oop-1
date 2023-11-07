@@ -19,4 +19,9 @@ class TvSerie extends Production {
 
   }
 
+  public function getTimeData(){
+    return "Aired: $this->aired_from_year - $this->aired_to_year , Seasons:$this->number_of_seasons Total Ep: $this->number_of_episodes ";
+  }
+
+
 }

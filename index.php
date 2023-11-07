@@ -39,7 +39,7 @@ die; */
       <div class="card-body">
         <h4 class="card-title"><?php echo $production->title ?></h4>
         <p class="card-text mb-5 description"><?php echo $production->description ?></p>
-        <p> </p>
+        <p> <?php echo $production->getTimeData() ?> </p>
         <p class="card-text genres"><strong>GENERI:</strong> <?php echo implode(', ', $production->genres) ?></p>
         
       </div>
