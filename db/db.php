@@ -1,6 +1,6 @@
 <?php
 
-$movies = [
+/* $movies = [
   new Movie('Pulp Fiction', 'Vincent Vega and Jules Winnfield are hitmen with a penchant for philosophical discussions. In this ultra-hip, multi-strand crime movie, their storyline is interwoven with those of their boss, gangster Marsellus Wallace.',['Neo-Noir','Pulp'], new Media('img/pulpfiction.jfif', 'Pulp Fiction')),
   
   new Movie('Fight Club', 'A depressed man suffering from insomnia meets a strange soap salesman named Tyler Durden and soon finds himself living in his squalid house after his perfect apartment is destroyed. The two bored men form an underground club with strict rules and fight other men who are fed up with their mundane lives.',['Satirical Novel', 'Thriller'], new Media('img/fightclub.webp', 'Fight Club')),
@@ -12,4 +12,4 @@ $movies = [
   new Movie('Blade Runner 2049', 'In 2049, 30 years after the events of Blade Runner, bioengineered humans known as replicants are slaves. K (short for serial number, KD6-3.7), a Nexus-9 replicant, works for the Los Angeles Police Department (LAPD) as a "blade runner", an officer who hunts and "retires" (kills) rogue replicants.',['Si-Fi'], new Media('img/bladerunner.jpg', 'BladeRunner')),
 
   new Movie('The Big Lebowski', 'Jeff The Dude Leboswki is mistaken for Jeffrey Lebowski, who is The Big Lebowski. Which explains why hes roughed up and has his precious rug peed on. In search of recompense, The Dude tracks down his namesake, who offers him a job. His wife has been kidnapped and he needs a reliable bagman. Aided and hindered by his pals Walter Sobchak, a Vietnam vet, and Donny, master of stupidity.',['Comedy'], new Media('img/The-big-lebowski-tracie-ching-poster.webp', 'Lebowski')),
-];
+]; */

@@ -1,20 +1,18 @@
 <?php
 
-class Movie{
-  public $title;
-  public $description;
-  public $release_date;
-  public $poster;
+class Movie extends Production {
 
-  public function __construct(string $_title, string $_description, array $_genres, Media $_poster = null){
+  public $published_year;
+  public $running_time;
 
-    $this->title = $_title;
-    $this->description = $_description;
-    $this->genres = $_genres;
-    $this->poster = $_poster;
+  public function __construct(string $_title, string $_description, array $_genres, Media $_poster = null, int $_published_year, float $_running_time ){
+
+    parent::__construct($_title, $_description, $_genres, $_poster);
+  
+    $this->published_year = $_published_year;
+    $this->running_time = $_running_time;
+
+
   }
 
-  public function setImage(Media $_poster){
-    $this->poster = $_poster;
-  }
 }

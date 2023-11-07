@@ -1,9 +1,17 @@
 <?php
-
+require_once __DIR__. '/Model/Production.php';
+require_once __DIR__. '/Model/TvSerie.php';
 require_once __DIR__. '/Model/Media.php';
 require_once __DIR__. '/Model/Movie.php';
 require_once __DIR__. '/db/db.php';
 
+$gameof = new TvSerie('got', 'blablabla', ['fantasy', 'drama'], new Media('img/American_Psycho.png', 'gameofthrones'), 1998, 2001, 49, 8);
+
+$fightClub = new Movie('Fightclub', 'xdddddddddd', ['action', 'drama'], new Media('img/fightclub.webp', 'fightCLuuu'), 1998, 2.56 );
+var_dump($fightClub);
+var_dump($gameof);
+
+die;
 ?>
 
 <!DOCTYPE html>
