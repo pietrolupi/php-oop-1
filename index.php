@@ -1,10 +1,19 @@
 <?php
-require_once __DIR__. '/Model/Production.php';
-require_once __DIR__. '/Model/TvSerie.php';
-require_once __DIR__. '/Model/Anime.php';
-require_once __DIR__. '/Model/Media.php';
-require_once __DIR__. '/Model/Movie.php';
-require_once __DIR__. '/db/db.php';
+
+try{
+
+  require_once __DIR__. '/Traits/Rating.php';
+  require_once __DIR__. '/Model/Production.php';
+  require_once __DIR__. '/Model/TvSerie.php';
+  require_once __DIR__. '/Model/Anime.php';
+  require_once __DIR__. '/Model/Media.php';
+  require_once __DIR__. '/Model/Movie.php';
+  require_once __DIR__. '/db/db.php';
+
+}catch(Exception $e){
+  $error = $e->getMessage();
+}
+
 
 if(isset($_POST['category'])){
   $switch = $_POST['category'];
@@ -12,6 +21,7 @@ if(isset($_POST['category'])){
   $switch = 'All';
 }
 
+/* var_dump($_POST['category']); */
 
 
 ?>
@@ -26,6 +36,14 @@ if(isset($_POST['category'])){
   <title>MOVIE OOP </title>
 </head>
 <body>
+
+  <?php if(isset($error)):?>
+    <div class="alert alert-danger text-center mt-5" role="alert">
+      <?php echo $error ?>
+    </div>
+  <?php else: ?>
+
+
   <h1 class="text-center">
     Pete's Movie Night
   </h1>
@@ -38,7 +56,7 @@ if(isset($_POST['category'])){
   
         <select class="form-select custom-select" aria-label="Default select example" name="category">
           <option value="All">All</option>
-          <option value="Movie">Movie</option>
+          <option value="Movie">Movies</option>
           <option value="TvSerie">Tv-Series</option>
           <option value="Anime">Anime</option>
         </select>
@@ -72,5 +90,6 @@ if(isset($_POST['category'])){
 
   </div>
   
+  <?php endif; ?>
 </body>
 </html>
