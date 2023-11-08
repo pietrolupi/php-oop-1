@@ -8,7 +8,7 @@ trait Rating{
 
   public function getGeneralRating(){
 
-    return ($this->viewer_rating + $this->critique_rating) / 2;
+    return "Viewers Rating: $this->viewer_rating - Critique Rating: $this->critique_rating - SCORE: ". ($this->viewer_rating + $this->critique_rating) / 2;
     
   }
 }

@@ -79,6 +79,7 @@ if(isset($_POST['category'])){
 
         <div class="datas">
           <p> <?php echo $production->getTimeData() ?> </p>
+          <span> <?php echo $production->getGeneralRating() ?></span>
           <p class="card-text genres"><strong>GENRES:</strong> <?php echo implode(', ', $production->genres) ?></p>
         </div>
         
